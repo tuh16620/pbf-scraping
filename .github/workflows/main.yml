@@ -38,5 +38,5 @@ jobs:
           subject: Bail Data
           body: Build okay whatever
           to: tuh16620@temple.edu
-          from: amourealexina@gmail.com
+          from: test.dummy.6000@gmail.com
           attachments: hello_mary.txt
