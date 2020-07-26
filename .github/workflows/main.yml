@@ -40,4 +40,4 @@ jobs:
           body: file:output/*.txt
           to: tuh16620@temple.edu
           from: test.dummy.6000@gmail.com
-          attachments: output/*.txt
+          attachments: output/hello_mary.txt
