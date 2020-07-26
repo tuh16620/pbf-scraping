@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Bail Data
-          body: file://output/*.txt
+          body: file:output/*.txt
           to: tuh16620@temple.edu
           from: test.dummy.6000@gmail.com
           attachments: output/*.txt
