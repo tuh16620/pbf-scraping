@@ -29,7 +29,6 @@ jobs:
           pip install -r requirements.txt
           mkdir output
           touch output/hello_mary.txt
-          pwd
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
@@ -38,7 +37,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Bail Data
-          body: file:/output/hello_mary.txt
+          body: file://home/runner/work/pbf-scraping/pbf-scraping/output/*.txt
           to: tuh16620@temple.edu
           from: test.dummy.6000@gmail.com
           attachments: output/*.txt
