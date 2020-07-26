@@ -32,6 +32,7 @@ jobs:
           touch output/$csv_name
           touch email.txt
           echo $csv_name
+          ls ./output
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
