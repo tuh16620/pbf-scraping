@@ -42,4 +42,4 @@ jobs:
           body: file://email.txt
           to: tuh16620@temple.edu
           from: test.dummy.6000@gmail.com
-          attachments: ./output/*
+          attachments: output/$csv_name.txt
