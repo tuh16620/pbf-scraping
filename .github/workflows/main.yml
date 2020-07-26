@@ -27,6 +27,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          mkdir output
           touch output/hello_mary.txt
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
