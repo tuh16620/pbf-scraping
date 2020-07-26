@@ -30,6 +30,7 @@ jobs:
           mkdir output
           csv_name=$(date +%Y-%m-%d -d "1 day ago")
           touch output/$csv_name.txt
+          touch email.txt
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
@@ -38,7 +39,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Bail Data
-          body: file://output/$csv_name.txt
+          body: file://email.txt
           to: tuh16620@temple.edu
           from: test.dummy.6000@gmail.com
           attachments: output/$csv_name.txt
