@@ -31,6 +31,7 @@ jobs:
           csv_name=$(date +%Y-%m-%d -d "1 day ago")
           touch output/$csv_name.txt
           touch email.txt
+          echo $csv_name.txt
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
