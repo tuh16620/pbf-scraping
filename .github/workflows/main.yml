@@ -28,10 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           mkdir output
-          csv_name=$(date +%Y-%m-%d -d "1 day ago")
-          touch output/$csv_name.txt
+          csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
+          touch output/$csv_name
           touch email.txt
-          echo $csv_name.txt
+          echo $csv_name
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
@@ -41,7 +41,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Bail Data
           body: file://email.txt
-          to: tuh16620@temple.edu
+          to: tuh16620@temple.edu, maryliu5758@gmail.com
           from: test.dummy.6000@gmail.com
-          content_type: text/html
-          attachments: ./output/*.txt
+          attachments: ./output/$csv_name
