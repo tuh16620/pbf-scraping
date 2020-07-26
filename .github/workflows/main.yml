@@ -29,7 +29,7 @@ jobs:
           pip install -r requirements.txt
           mkdir output
           touch output/hello_mary.txt
-          ls output
+          pwd
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
