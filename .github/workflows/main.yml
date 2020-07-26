@@ -44,4 +44,4 @@ jobs:
           to: tuh16620@temple.edu
           from: test.dummy.6000@gmail.com
           content_type: text/html
-          attachments: ./output/${{ csv_name }}.txt
+          attachments: ./output/*.txt
