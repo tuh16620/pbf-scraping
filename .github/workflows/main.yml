@@ -31,7 +31,7 @@ jobs:
           mkdir output
           export csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
           touch output/$csv_name
-          echo "this is the email body" email.txt
+          echo "this is the email body" > email.txt
           echo $csv_name
           pwd
       - name: Send mail
