@@ -30,7 +30,7 @@ jobs:
           csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
           touch ./output/$csv_name
           echo "this is the email body" > email.txt
-          ls
+          ls output
           pwd $csv_name
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
