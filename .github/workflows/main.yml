@@ -32,6 +32,8 @@ jobs:
           echo "this is the email body" > email.txt
           ls output
           file $csv_name
+          dos2unix $csv_name
+          file $csv_name
           cd output
           pwd
       - name: Send mail
