@@ -29,12 +29,13 @@ jobs:
           pip install -r requirements.txt
           npm install
           mkdir output
-          export csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
+          csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
           touch output/$csv_name
           mv ./output/$csv_name .
           echo "this is the email body" > email.txt
           echo $csv_name
           pwd $csv_name
+          pwd email.txt
           pwd
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
@@ -47,4 +48,4 @@ jobs:
           body: file://email.txt
           to: tuh16620@temple.edu, maryliu5758@gmail.com
           from: test.dummy.6000@gmail.com
-          attachments: ./$csv_name
+          attachments: $csv_name
