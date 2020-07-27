@@ -43,6 +43,4 @@ jobs:
           body: file://email.txt
           to: tuh16620@temple.edu, maryliu5758@gmail.com
           from: test.dummy.6000@gmail.com
-          attachments: ${PATH1}csv_name
-        env:
-          PATH1: "./output/"
+          attachments: ./output/$csv_name,../output/$csv_name,$csv_name
