@@ -26,13 +26,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          npm install
+          #pip install -r requirements.txt
           csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
           touch ./output/$csv_name
           echo "this is the email body" > email.txt
           ls
-          pwd
+          pwd $csv_name
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
