@@ -31,7 +31,7 @@ jobs:
           touch ./output/$csv_name
           echo "this is the email body" > email.txt
           ls output
-          pwd $csv_name
+          file $csv_name
           cd output
           pwd
       - name: Send mail
