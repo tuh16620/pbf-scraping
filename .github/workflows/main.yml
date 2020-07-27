@@ -29,7 +29,7 @@ jobs:
           pip install -r requirements.txt
           npm install
           mkdir output
-          csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
+          export csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
           touch output/$csv_name
           touch email.txt
           echo $csv_name
