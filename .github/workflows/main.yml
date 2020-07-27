@@ -28,14 +28,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           npm install
-          mkdir output
           csv_name=$(date +%Y-%m-%d -d "1 day ago").txt
-          touch output/$csv_name
+          touch ./output/$csv_name
           echo "this is the email body" > email.txt
-          echo $csv_name
-          pwd $csv_name
-          pwd email.txt
-          pwd
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
