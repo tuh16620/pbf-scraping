@@ -34,6 +34,7 @@ jobs:
           mv ./output/$csv_name .
           echo "this is the email body" > email.txt
           echo $csv_name
+          pwd $csv_name
           pwd
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
