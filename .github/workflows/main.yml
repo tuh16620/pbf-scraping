@@ -45,4 +45,4 @@ jobs:
           body: file://email.txt
           to: tuh16620@temple.edu, maryliu5758@gmail.com
           from: test.dummy.6000@gmail.com
-          attachments: ./output/${csv_name}
+          attachments: email.txt, ./output/${csv_name}
