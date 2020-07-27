@@ -31,7 +31,7 @@ jobs:
           touch ./output/$csv_name
           echo "this is the email body" > email.txt
           ls output
-          pwd $HOME
+          pwd $csv_name
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
@@ -43,4 +43,4 @@ jobs:
           body: file://email.txt
           to: tuh16620@temple.edu, maryliu5758@gmail.com
           from: test.dummy.6000@gmail.com
-          attachments: ./output/$csv_name
+          attachments: $HOME/output/$csv_name
