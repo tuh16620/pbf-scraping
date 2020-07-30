@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Set env
-        run: ::set-env name=csv_name::$(date +%Y-%m-%d -d "1 day ago").txt
+        run: echo ::set-env name=csv_name::$(date +%Y-%m-%d -d "1 day ago").txt
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Runs a set of commands using the runners shell
